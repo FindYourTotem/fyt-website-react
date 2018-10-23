@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "fytwebsitereact-20181023065427-authRole",
+            "UnauthRoleArn": "arn:aws:iam::041767885136:role/fytwebsitereact-20181023065427-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::041767885136:role/fytwebsitereact-20181023065427-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "fytwebsitereact-20181023065427-deployment",
+            "UnauthRoleName": "fytwebsitereact-20181023065427-unauthRole",
+            "StackName": "fytwebsitereact-20181023065427",
+            "StackId": "arn:aws:cloudformation:us-east-1:041767885136:stack/fytwebsitereact-20181023065427/7be2b590-d690-11e8-8877-50fae9826c99"
+        }
+    }
+}
