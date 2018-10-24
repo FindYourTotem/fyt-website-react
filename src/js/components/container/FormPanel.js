@@ -92,7 +92,9 @@ class FormPanel extends Component {
 			}).then(res => res.json())
 				.then(json => this.handleSubmissionResponse(json));
 		} else {
-			console.log("Invalid celebrity chosen.");
+			const description = "Invalid celebrity chosen.";
+			console.log(description);
+			this.props.displayModal(false, description);
 		}
 	}
 
@@ -100,10 +102,16 @@ class FormPanel extends Component {
    * TODO: Show some kind of pop-up that indicates the results of the submission
 	 */
 	handleSubmissionResponse(response) {
-		if (response.statusCode === 200) {
+		if (response.statusCode == undefined) {
+			const description = "Please provide a valid email address.";
+			console.log(description);
+			this.props.displayModal(false, description);
+		} else if (response.statusCode === 200) {
 			console.log(response.description);
+			this.props.displayModal(true, response.description);
 		} else {
 			console.log(response.description);
+			this.props.displayModal(false, response.description);
 		}
 	}
 
