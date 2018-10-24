@@ -4,11 +4,10 @@ class CopyPanel extends Component {
 
 	render() {
 		return (
-			<div className="main-copy">
-      	<h1>Celebrity Totem Challenge</h1>
-				<h2>Insomniac + AWS want to hightlight rave fam 🔥🔥🔥 and awesome new tech</h2>
-				<p>Show up to edc Orlando 2018 with a unique totem based on a media, sport, or political celebrity. Get attendees to interact with your totem and post their interactions on <a href="">Find Your Totem</a>. The persons with most interactions on the app win 🎉</p>
-				<p><strong>Tip:</strong> Don’t forget to check-in at stage entrances to help attendees locate your totem.</p>
+		<div className="main-copy">
+  			<h1>Celebrity Totem Challenge Beta Test Sign Up</h1>
+			<h2>Check out new experiences to highlight rave fam 🔥🔥🔥 by checking in your totem!</h2>
+			<p>Sign up and show up to EDC Orlando 2018 with a unique totem based on a media, sport, or political celebrity. Get attendees to check in with your totem and record its location on <a href="">Find Your Totem</a>. The team with the most check ins for their celebrity at EDC Orlando wins! 🎉</p>
     	</div>
 		);
 	}
