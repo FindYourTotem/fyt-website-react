@@ -131,7 +131,7 @@ class FormPanel extends Component {
 		  <div className="form-content">
 		    <form>
 		        <h1>Step 1.</h1>
-		        <h2>Choose a media, sport, or political celebrity to a base a totem on</h2>
+		        <h2>Choose a media, sport, or political celebrity to a base your totem on <br/> (Note: celebrity must be on the drop-down list)</h2>
 		        <div className="form-group">
 		            <input value={this.state.searchTerm} onChange={(e) => this.handleCelebrityInputChange(e)} type="text" id="celebrity" className="form-control" autoComplete="off" required/>
 		            <label className="form-control-placeholder" htmlFor="celebrity">Celebrity <span>select up to 3</span></label>
@@ -164,7 +164,7 @@ class FormPanel extends Component {
 		        </div>
 		        <button onClick={(e) => this.submitForm(e)}>Register &amp; Sign Up</button>
 		        <h1>Step 3.</h1>
-		        <h2>Show up, check-in and get people to interact with your totem at the festival</h2>
+		        <h2>Show up, check in, and get people to interact with your totem at the festival!</h2>
 		    </form>
 			</div>
 		);
