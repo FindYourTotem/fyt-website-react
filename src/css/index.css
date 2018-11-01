@@ -487,6 +487,7 @@ button.feedback-modal:hover, button.feedback-modal:active {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 
 	background: #F5F6F9;
 	color: #030349;
@@ -506,14 +507,14 @@ button.feedback-modal:hover, button.feedback-modal:active {
 }
 
 .edc-hero-image {
-	max-width: 340px;
+	max-width: 240px;
 	margin-bottom: 24px;
 }
 
 .edc-hero-gradient {
 	position: absolute;
-	min-width: 340px;
-	min-height: 232px;
+	min-width: 240px;
+	min-height: 165px;
 	background: -moz-linear-gradient(bottom, rgba(1,4,73,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(bottom, rgba(1,4,73,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to top, rgba(1,4,73,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
