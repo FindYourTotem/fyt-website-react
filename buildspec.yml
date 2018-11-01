@@ -6,10 +6,13 @@ phases:
  pre_build:
    commands:
      - echo "pre_build step"
+     - npm install
  build:
    commands:
-     - npm run-script build
-     - ls -l ./build
+     - npm run build
  post_build:
    commands:
      - echo "post_build step"
+ artifacts:
+   files:
+     - build/*
