@@ -7,11 +7,6 @@ const LIST_MAX_SIZE = 5;
 var CELEBRITY_URL = "/data/auth/celebrities/valid";
 var SIGNUP_URL = "/data/auth/signup";
 
-if (process.env.NODE_ENV === "production") {
-	CELEBRITY_URL = "https://api.findyourtotem.net" + CELEBRITY_URL;
-	SIGNUP_URL = "https://api.findyourtotem.net" + SIGNUP_URL;
-}
-
 class FormPanel extends Component {
 	constructor(props) {
 		super(props);
