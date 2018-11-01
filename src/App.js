@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FytLogo, CopyPanel, FormPanel, FaqPanel, ModalAlert } from './js/components/Bundler';
+import { FytLogo, CopyPanel, FormPanel, FaqPanel, ExtraPanel, ModalAlert } from './js/components/Bundler';
 import './css/index.css';
 import './css/main.css';
 import './css/normalize.css';
@@ -52,6 +52,10 @@ class App extends Component {
 
         <div className="faq">
           <FaqPanel/>
+        </div>
+
+        <div className="extra">
+          <ExtraPanel/>
         </div>
       </body>
     );
