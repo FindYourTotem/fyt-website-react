@@ -8,7 +8,8 @@ phases:
      - echo "pre_build step"
  build:
    commands:
-     - npm build
+     - npm run-script build
+     - ls -l ./build
  post_build:
    commands:
      - echo "post_build step"
