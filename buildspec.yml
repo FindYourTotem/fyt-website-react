@@ -13,7 +13,7 @@ phases:
  post_build:
    commands:
      - echo "post_build step"
-     - aws s3 sync build/ s3://richung-test-site/
+     - aws s3 sync --delete build/ s3://richung-test-site/
 # artifacts:
 #   files:
 #     - build/**/*
