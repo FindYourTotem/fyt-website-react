@@ -105,7 +105,7 @@ a:hover, a:active {
 }
 .form-content {
 	max-width: 390px;
-	margin: 48px 24px;
+	margin: 96px 24px 48px 24px;
 }
 .form-content h1 {
 	font-size: 17px;
@@ -202,7 +202,9 @@ ul.auto-complete-table li {
 ul.auto-complete-table li:hover, ul.auto-complete-table li:active  {
 	background: #F5F6F9;
 }
-	
+.dark-strong {
+	color: black;
+}
 	
 	
 	
@@ -351,7 +353,7 @@ svg.dark-fyt-logo {
 }
 .main-copy {
 	position: relative;
-	max-width: 465px;
+	max-width: 540px;
 }
 svg.phone-frame {
 	position: absolute;
@@ -387,7 +389,7 @@ button {
 }
 .form-content {
 	max-width: 390px;
-	margin: 48px 24px;
+	margin: 96px 24px 48px 24px;
 }
 .form-content h1 {
 	font-size: 20px;
@@ -460,4 +462,60 @@ button.feedback-modal {
 }
 button.feedback-modal:hover, button.feedback-modal:active {
 	background: rgba(255,255,255,.38);
+}
+
+.form-title {
+	color: #030349;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+}
+
+.form-subtitle {
+	color: #030349;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 48px;
+	margin-bottom: 12;
+	text-align: center;
+}
+
+.extra {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: #F5F6F9;
+	color: #030349;
+}
+
+.sponsors-logo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.edc-hero-image {
+	max-width: 340px;
+	margin-bottom: 24px;
+}
+
+.edc-hero-gradient {
+	position: absolute;
+	min-width: 340px;
+	min-height: 232px;
+	background: -moz-linear-gradient(bottom, rgba(1,4,73,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(bottom, rgba(1,4,73,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to top, rgba(1,4,73,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6010449', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }

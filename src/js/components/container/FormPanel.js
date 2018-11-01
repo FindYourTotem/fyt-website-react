@@ -16,7 +16,7 @@ class FormPanel extends Component {
 			suggestionsActive: false,
 			chosenCelebrity: undefined,
 			email: "",
-			teamName: "",
+			phoneNumber: "",
 			searchTerm: "",
 		};
 
@@ -79,7 +79,7 @@ class FormPanel extends Component {
 			var data = {
 				"celebrity": this.state.chosenCelebrity.celebrity_id,
 				"email": this.state.email,
-				"teamName": this.state.teamName,
+				"phoneNumber": this.state.phoneNumber,
 			};
 			console.log(data);
 
@@ -92,7 +92,7 @@ class FormPanel extends Component {
 			}).then(res => res.json())
 				.then(json => this.handleSubmissionResponse(json));
 		} else {
-			const description = "Invalid celebrity chosen.";
+			const description = "You must choose one of the prompted celebrities!";
 			console.log(description);
 			this.props.displayModal(false, description);
 		}
@@ -124,10 +124,26 @@ class FormPanel extends Component {
 	render() {
 		return (
 		  <div className="form-content">
+  		<div className="form-title">Celebrity Totem Challenge</div>
+  		<div className="form-subtitle">Powered by AWS</div>
+
 		    <form>
 		        <h1>Step 1.</h1>
-		        <h2>Choose a media, sport, or political celebrity to a base your totem on <br/> (Note: celebrity must be on the drop-down list)</h2>
+		        <h2>Enter your email address, and a phone number to reach you.
+		        <br/>
+		        <strong className="dark-strong">NOTE:</strong> <em>Phone number will be used to locate and contact you while onsite (likely via text message).</em></h2>
+		       	<div className="form-group">
+		            <input onChange={(e) => this.setState({phoneNumber: e.target.value})} id="phone-number" className="form-control" required/>
+		            <label className="form-control-placeholder" htmlFor="phone-number">Phone number</label>
+		        </div>
 		        <div className="form-group">
+		            <input onChange={(e) => this.setState({email: e.target.value})} type="email" id="email" className="form-control" required/>
+		            <label className="form-control-placeholder" htmlFor="email">Email</label>
+		        </div>
+
+		        <h1>Step 2.</h1>
+		        <h2>Choose a media, sport, or political celebrity on which to base your totem</h2>
+		       	<div className="form-group">
 		            <input value={this.state.searchTerm} onChange={(e) => this.handleCelebrityInputChange(e)} type="text" id="celebrity" className="form-control" autoComplete="off" required/>
 		            <label className="form-control-placeholder" htmlFor="celebrity">Celebrity <span>select up to 3</span></label>
 		            <button className="inline" onClick={() => this.activateSuggestions()}>
@@ -147,19 +163,9 @@ class FormPanel extends Component {
 		                </ul>
 		            </div>
 		        </div>
-		        <h1>Step 2.</h1>
-		        <h2>Sign up for Find Your Totem</h2>
-		        <div className="form-group">
-		            <input onChange={(e) => this.setState({email: e.target.value})} type="email" id="email" className="form-control" required/>
-		            <label className="form-control-placeholder" htmlFor="email">Email</label>
-		        </div>
-		        <div className="form-group">
-		            <input onChange={(e) => this.setState({teamName: e.target.value})} id="team-name" className="form-control" required/>
-		            <label className="form-control-placeholder" htmlFor="team-name">Team Name</label>
-		        </div>
 		        <button onClick={(e) => this.submitForm(e)}>Register &amp; Sign Up</button>
-		        <h1>Step 3.</h1>
-		        <h2>Show up, check in, and get people to interact with your totem at the festival!</h2>
+						<h1>That’s it!</h1> <h2>After submitting, you’ll receive a confirmation email with next steps and official rules. </h2>
+						<h2>Can’t wait to see you at EDC Orlando! </h2>
 		    </form>
 			</div>
 		);
