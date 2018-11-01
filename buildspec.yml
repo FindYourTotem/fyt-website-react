@@ -3,13 +3,17 @@ phases:
  install:
    commands:
      - echo "install step"
+     - npm install
  pre_build:
    commands:
      - echo "pre_build step"
  build:
    commands:
-     - npm build
+     - npm run build
  post_build:
    commands:
      - echo "post_build step"
-     - aws s3 sync --delete . "s3://richung-test-site"
+     - aws s3 sync --delete build/ s3://fytwebsitereact-20181023065530--hostingbucket/
+# artifacts:
+#   files:
+#     - build/**/*
