@@ -14,6 +14,3 @@ phases:
    commands:
      - echo "post_build step"
      - aws s3 sync --delete build/ s3://fytwebsitereact-20181023065530--hostingbucket/
-# artifacts:
-#   files:
-#     - build/**/*
