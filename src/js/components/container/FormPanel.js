@@ -145,7 +145,7 @@ class FormPanel extends Component {
 		        <h2>Choose a media, sport, or political celebrity on which to base your totem</h2>
 		       	<div className="form-group">
 		            <input value={this.state.searchTerm} onChange={(e) => this.handleCelebrityInputChange(e)} type="text" id="celebrity" className="form-control" autoComplete="off" required/>
-		            <label className="form-control-placeholder" htmlFor="celebrity">Celebrity <span>select up to 3</span></label>
+		            <label className="form-control-placeholder" htmlFor="celebrity">Celebrity</label>
 		            <button className="inline" onClick={() => this.activateSuggestions()}>
 		            	{
 		            		this.state.chosenCelebrity
